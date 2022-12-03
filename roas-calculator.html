@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lilo || Growth Marketing Agency</title>
+
+    <link rel="shortcut icon" href="assets/images/favicon-16x16.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="assets/css/footer.css"> -->
+
+
+    <link rel="stylesheet" href="assets/css/radio.css">
+    <link rel="stylesheet" href="assets/css/lilo.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+
+<body>
+
+    <style>
+    
+    </style>
+    <div class="section-calc">
+        <div>
+            <div class="row">
+                <div class="col-md-6 p-0">
+                    <div class="left-form">
+                        <div class="logo-box">
+                            <a href="index.html">
+                                <img src="assets/images/hero-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                    
+                        <div class="cover">
+                            <div class="inner-content">
+                                <h1 class="title">
+                                    See how your ad performance and spend effect your revenue.
+                                </h1>
+                                <p class="subtitle">
+                                    Understanding your costs and revenue from an ads dashboard can be difficult. Insert some of your
+                                    baseline metrics,
+                                    and
+                                    we’ll show you how an increase in spend or performance effects your bottom line.
+                                </p>
+                            </div>
+                    
+                            <hr />
+                    
+                            <form action="#">
+                                <div class="inner-content">
+                                    <div class="row mt-50 mb-50">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">Average order value *</label>
+                                                <input type="text" name="order" placeholder="100.00" class="p-left">
+                                                <span class="left">$</span>
+                                            </div>
+                                        </div>
+
+                                        <!-- <div class="flexbreak"></div> -->
+                    
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <label for="profit" class="d-block">Average profit margins *</label>
+                                                <input type="text" name="profit" placeholder="80" class="avgprofit">
+                                                <span class="input-label right">%</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <hr />
+                    
+                                <form action="#">
+                                    <div class="inner-content">
+                                        <div class="col-md-6 mt-50 mb-50">
+                                            <div class="form-group">
+                                                <label for="profit">Credit Card Processing fee *</label>
+                                                <input type="text" name="profit" placeholder="80" class="p-left w-50">
+                                                <span class="left">%</span>
+                                            </div>
+                                        </div>
+                    
+                                        <label>Agency Fee *</label>
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="d-flex">
+                                                        <input id="r1" type="radio" name="radio" value="1" class="agencydot"
+                                                            onClick="showGroup1();">
+                                                        <!-- value="igottwo" onclick="show2();" -->
+                                                        <label for="r1">Percentage</label>
+                                                    </div>
+                    
+                                                    <div class="form-group agency">
+                                                        <label for="profit">&nbsp;</label>
+                                                        <input type="text" name="profit" placeholder="80" class="p-left w-50">
+                                                        <span class="left">%</span>
+                                                    </div>
+                                                </div>
+                    
+                                            </li>
+                                            <li>
+                                                <input id="r2" type="radio" name="radio" value="2" onClick="hideGroup1();" checked>
+                                                <label for="r2">No Agency Fee</label>
+                                            </li>
+                                        </ul>
+                    
+                                        <label>Shipping Cost of each order *</label>
+                                        <ul>
+                                            <li>
+                                                <div class="d-flex align-items-center">
+                                                    <div class="d-flex">
+                                                        <input id="r3" type="radio" name="radio2" value="1" onClick="showGroup2();">
+                                                        <!-- value="igottwo" onclick="show2();" -->
+                                                        <label for="r3">Paid&nbsp;by&nbsp;myself</label>
+                                                    </div>
+                    
+                                                    <div class="form-group shipping">
+                                                        <label for="profit">&nbsp;</label>
+                                                        <input type="text" name="profit" placeholder="80" class="p-left w-50">
+                                                        <span class="left">$</span>
+                                                    </div>
+                                                </div>
+                    
+                                            </li>
+                                            <li>
+                                                <input id="r4" type="radio" name="radio2" value="2" onClick="hideGroup2();" checked>
+                                                <label for="r4">Paid by Customer</label>
+                                            </li>
+                                        </ul>
+                                    </div>
+                    
+                                    <hr />
+                    
+                                    <div class="inner-content">
+                                        <div class="col-md-12 mt-50">
+                                            <div class="form-group">
+                                                <label for="profit" class="d-block">intended monthly spend *</label>
+                                                <input type="text" placeholder="80" class="p-left w-50">
+                                                <span class="left">$</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12 mt-50">
+                                            <div class="form-group">
+                                                <label for="order" class="w-75 d-block">how much of profit would you love to see after all
+                                                    expense? *</label>
+                                                <input type="text" placeholder="80" class="p-left w-50">
+                                                <span class="left">$</span>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12 mt-50 mb-50">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">customer lifetime value *</label>
+                                                <input type="text" placeholder="80" class="p-left w-50">
+                                                <span class="left">$</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <hr />
+                    
+                                    <div class="inner-content">
+                                        <div class="col-md-12 mt-50">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">first name *</label>
+                                                <input type="text" name="order" placeholder="First Name" class="w-75">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12 mt-50">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">last name *</label>
+                                                <input type="text" name="order" placeholder="Last Name" class="w-75">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12 mt-50">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">company name *</label>
+                                                <input type="text" name="order" placeholder="Company Name" class="w-75">
+                                            </div>
+                                        </div>
+                    
+                                        <div class="col-md-12 mt-50 mb-50">
+                                            <div class="form-group">
+                                                <label for="order" class="d-block">email *</label>
+                                                <input type="text" name="order" placeholder="Email" class="w-75">
+                                            </div>
+                                        </div>
+                                    </div>
+                    
+                                    <hr />
+                    
+                                    <div class="inner-content">
+                                        <input type="submit" class="btn primary-btn mx-auto w-75 my-4" value="Submit">
+                                    </div>
+                                </form>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 bg-grey">
+                    <div class="right-box">
+                        <div class="container">
+                            <div class="box-wrapper">
+                                <div class="whitebox">
+                                    <h3>Complete the form to the left</h3>
+                    
+                                    <h1>Calculate your profit with one click</h1>
+                    
+                                    <hr />
+                    
+                                    <p>If you have any questions, <br /> please reach out to hello@lilosocial.com</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main05dd.js"></script>
+    <script src="assets/js/swiper-bundle.min6669.js"></script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/noframework.waypoints.min.js"></script>
+    <script src="https://owlcarousel2.github.io/OwlCarousel2/assets/owlcarousel/owl.carousel.js"></script>
+    <script>
+
+    function hideGroup1() {
+        document.querySelector('.form-group.agency').style.display = 'none';
+    }
+    function showGroup1() {
+        document.querySelector('.form-group.agency').style.display = 'block';
+    }
+    
+    function hideGroup2() {
+        document.querySelector('.form-group.shipping').style.display = 'none';
+    }
+    function showGroup2() {
+        document.querySelector('.form-group.shipping').style.display = 'block';
+    }
+    
+    </script>
+</body>
+</html>

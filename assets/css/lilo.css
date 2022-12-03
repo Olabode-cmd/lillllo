@@ -1,0 +1,1115 @@
+.head_1 {
+    height: 104px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    -o-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+}
+
+.sticky_h .head_1 {
+    box-shadow: 0 18px 37px -7px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    height: 56px;
+}
+
+.head_1 .inner {
+    height: 100%;
+    display: flex;
+    max-width: 1240px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 20px;
+}
+
+.head_1 .logo a {
+    display: flex;
+}
+
+.head_1 .hamburger {
+    display: none;
+}
+
+.head_1 .logo a {
+    display: flex;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav ul a {
+    margin-left: 29px;
+    position: relative;
+}
+
+.nav ul li a:after {
+    content: "";
+    display: inline-block;
+    width: 0;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    height: 1px;
+    background: #fc5811;
+    transition: all 200ms ease-in-out;
+}
+
+.nav ul li a:hover:after,
+.nav ul li a.active:after {
+    width: 100%;
+}
+
+.nav ul li.current-menu-item a:after {
+    width: 100%;
+}
+
+
+/* .head_1 .nav ul .btn a {
+    color: #1d1916;
+    border: 1px solid #1d1916;
+    border-radius: 4px;
+    padding: 9px 15px;
+    display: inline-flex;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    letter-spacing: -0.2px;
+    font-family: "Apercu", sans-serif;
+    background: transparent;
+    justify-content: center;
+} */
+
+.hamburger .hamburger_inner {
+    display: flex;
+    position: relative;
+    margin-left: auto;
+    margin-right: -9px;
+    width: 40px;
+    height: 46px;
+    cursor: pointer;
+    pointer-events: all;
+    background: transparent;
+    outline: none;
+    border: none;
+}
+
+.hamburger .hamburger_inner:after,
+.hamburger .hamburger_inner:before {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 10px;
+    width: 17px;
+    height: 2px;
+    background: #000;
+    -webkit-transition: -webkit-transform 0.3s ease-out;
+    transition: -webkit-transform 0.3s ease-out;
+    transition: transform 0.3s ease-out;
+    transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
+}
+
+.hamburger .hamburger_inner_text {
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+}
+
+.hamburger .hamburger_inner:after {
+    top: auto;
+    bottom: 19px;
+}
+
+.menu_opened .hamburger .hamburger_inner:before {
+    -webkit-transform: translateY(3px) rotate(135deg);
+    transform: translateY(3px) rotate(135deg);
+}
+
+.menu_opened .hamburger .hamburger_inner:after {
+    -webkit-transform: translateY(-3px) rotate(45deg);
+    transform: translateY(-3px) rotate(45deg);
+}
+
+@media only screen and (max-width: 1300px) {
+    .head_1 .inner {
+        max-width: 968px;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .head_1 {
+        height: 80px;
+    }
+
+    .head_1 .inner {
+        max-width: 754px;
+    }
+
+    .head_1 .nav ul a {
+        margin-left: 25px;
+    }
+
+    .head_1 .nav .btn {
+        margin-left: 2px;
+    }
+
+    .head_1 .nav.fi-03-v05 {
+        font-size: 14px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .head_1 .nav ul .btn a {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.168932px;
+        padding: 8px 17px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .head_1 {
+        height: 70px;
+    }
+
+    .head_1 .inner {
+        max-width: 374px;
+    }
+
+    .head_1 .nav {
+        display: none;
+    }
+
+    .head_1 .hamburger {
+        display: block;
+        position: relative;
+        margin: 0;
+    }
+
+    .sticky_h .head_1 {
+        height: 46px;
+    }
+
+    .head_1 .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        background: #fff;
+        left: 0;
+        top: -100vh;
+        -webkit-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+        transition: 0.3s ease-out, 0.3s ease-out;
+        padding: 20px 20px 20px;
+    }
+
+    .menu_opened .head_1 .nav {
+        top: 0;
+    }
+
+    .head_1 .logo {
+        z-index: 9;
+        position: relative;
+    }
+
+    .head_1 .nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .head_1 .nav ul a {
+        margin-left: 0;
+        margin-bottom: 13px;
+    }
+
+    .head_1 .nav.fi-03-v05 {
+        font-size: 30px;
+        line-height: 47px;
+    }
+
+    .head_1 .nav .btn {
+        margin-top: 14px;
+        margin-left: 0;
+    }
+
+    .head_1 .nav ul .buttons a {
+        font-size: 25px;
+        line-height: 33px;
+        padding: 9px 20px;
+    }
+
+    .menu_opened,
+    .no_overflow {
+        overflow: hidden;
+    }
+
+    .head_1 .nav ul li a:after {
+        bottom: 0px;
+    }
+
+    .head_1 .nav ul .btn a {
+        font-size: 25px;
+        line-height: 33px;
+        padding: 9px 20px;
+    }
+}
+
+@media only screen and (max-width: 439px) {}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+@-webkit-keyframes text_animate {
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes text_animate {
+    to {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+/* Footer */
+.wp-block-pullquote cite,
+.wp-block-pullquote footer {
+    position: relative
+}
+.wp-block-quote.is-large cite,
+.wp-block-quote.is-large footer,
+.wp-block-quote.is-style-large cite,
+.wp-block-quote.is-style-large footer {
+    font-size: 1.125em;
+    text-align: right
+}
+.b_form .gform_wrapper .gform_footer input.button,
+.b_form .gform_wrapper .gform_footer input[type="submit"],
+.b_form .gform_wrapper .gform_page_footer input.button,
+.b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+    color: #1d1916;
+    border: 1px solid #1d1916;
+    border-radius: 4px;
+    padding: 9px 15px;
+    display: inline-flex;
+    transition: all 200ms ease-in-out;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    letter-spacing: -0.2px;
+    font-family: "Apercu", sans-serif;
+    background: transparent;
+    justify-content: center;
+    background: #fc5811;
+    border: 1px solid #fc5811;
+    color: #fff;
+    outline: none !important;
+}
+
+.b_form .gform_wrapper .gform_footer input.button:hover,
+.b_form .gform_wrapper .gform_footer input[type="submit"]:hover,
+.b_form .gform_wrapper .gform_page_footer input.button:hover,
+.b_form .gform_wrapper .gform_page_footer input[type="submit"]:hover {
+    background: transparent;
+    color: #1d1916;
+}
+
+.foot_1 .b_form .gform_wrapper .gform_footer input.button,
+.foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"],
+.foot_1 .b_form .gform_wrapper .gform_page_footer input.button,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+    color: #1d1916;
+    border: 1px solid #1d1916;
+    background: transparent;
+}
+
+.foot_1 .b_form .gform_wrapper .gform_footer input.button:hover,
+.foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"]:hover,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input.button:hover,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"]:hover {
+    background: #1d1916;
+    color: #fff;
+}
+
+.bl-49 .b_form .gform_wrapper .gform_footer input.button,
+.bl-49 .b_form .gform_wrapper .gform_footer input[type="submit"],
+.bl-49 .b_form .gform_wrapper .gform_page_footer input.button,
+.bl-49 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+    color: #f9f4f0;
+    border: 1px solid #f9f4f0;
+    background: transparent;
+}
+
+.bl-49 .b_form .gform_wrapper .gform_footer input.button:hover,
+.bl-49 .b_form .gform_wrapper .gform_footer input[type="submit"]:hover,
+.bl-49 .b_form .gform_wrapper .gform_page_footer input.button:hover,
+.bl-49 .b_form .gform_wrapper .gform_page_footer input[type="submit"]:hover {
+    color: #1d1916;
+    background: #f9f4f0;
+}
+.b_form .gform_wrapper .gform_footer {
+    padding: 0 0 10px 0;
+    margin: -10px 0 0 0;
+    clear: both;
+    width: 100%;
+}
+
+.b_form .gform_validation_error.gform_wrapper .gform_footer {
+    margin: 36px 0 0 0;
+}
+
+.foot_1 .b_form .gform_wrapper .gform_footer input.button,
+.foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"],
+.foot_1 .b_form .gform_wrapper .gform_page_footer input.button,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+    color: #1d1916;
+    border: 1px solid #1d1916;
+    background: transparent;
+}
+
+.foot_1 .b_form .gform_wrapper .gform_footer input.button:hover,
+.foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"]:hover,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input.button:hover,
+.foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"]:hover {
+    background: #1d1916;
+    color: #fff;
+}
+
+@media only screen and (max-width: 1300px) {
+    .b_form .email_form.success .after_sent {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+    .b_form .gform_wrapper ul.gform_fields li.gfield.gfield_error+li.gfield.gfield_error {
+        margin-top: 0;
+        padding-top: 0;
+        margin-bottom: 22px !important;
+    }
+
+    .b_form .gform_wrapper li.gfield.gfield_error,
+    .b_form .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+        margin-bottom: 22px !important;
+    }
+}
+
+@media only screen and (max-width: 990px) {
+    .b_form .gfield {
+        margin-bottom: 22px;
+    }
+
+    .b_form .gfield .heading {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+        margin-bottom: 3px;
+    }
+
+    .b_form .req {
+        padding-left: 4px;
+    }
+
+    .b_form .gfield input,
+    .b_form .gfield textarea {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+        height: 26px;
+        padding: 4px 0;
+    }
+
+    .b_form .gfield *::placeholder {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+    }
+
+    .b_form .gfield textarea {
+        min-height: 26px;
+    }
+
+    .b_form .form_cs {
+        padding: 9px 0 0;
+    }
+
+    .b_form .f_cs_i {
+        margin-bottom: 6px;
+    }
+
+    .b_form .f_cs_i label {
+        font-size: 12px;
+        line-height: 17px;
+        letter-spacing: -0.153756px;
+        padding-left: 18px;
+    }
+
+    .b_form .i_checkbox {
+        height: 13px;
+        width: 13px;
+    }
+
+    .b_form .buttons {
+        margin-top: -5px;
+    }
+
+    .b_form .success .after_sent {
+        font-size: 23px;
+        line-height: 33px;
+    }
+
+    .b_form .email_form.success .after_sent {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .b_form .gform_wrapper label.gfield_label {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+    }
+
+    .b_form .gform_wrapper .gfield_checkbox li label,
+    .b_form .gform_wrapper .gfield_radio li label {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+    }
+
+    .b_form .gform_wrapper .gform_footer input.button,
+    .b_form .gform_wrapper .gform_footer input[type="submit"],
+    .b_form .gform_wrapper .gform_page_footer input.button,
+    .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: -0.168932px;
+        padding: 8px 17px;
+    }
+
+    .b_form .gform_wrapper textarea.small {
+        height: 26px;
+    }
+
+    .foot_1 .b_form .gform_wrapper .gform_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"],
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.168932px;
+        padding: 6px 15px;
+    }
+
+    .gform_wrapper li.gfield.gfield_error.gfield_contains_required div.gfield_description {
+        font-size: 11px;
+    }
+
+    .b_form_mailchimp input#mce-EMAIL {
+        line-height: 18px;
+        font-size: 13px;
+    }
+
+    .b_form_mailchimp #mc_embed_signup div.mce_inline_error {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .b_form .gfield {
+        margin-bottom: 30px;
+    }
+
+    .b_form .gfield .heading {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .b_form .gform_wrapper .two_columns .ginput_container_checkbox ul li {
+        width: 100%;
+        margin-bottom: 12px;
+    }
+
+    .b_form .gfield input,
+    .b_form .gfield textarea {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        height: 32px;
+        padding: 4px 0;
+    }
+
+    .b_form .gfield *::placeholder {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .b_form .gfield textarea {
+        min-height: 32px;
+    }
+
+    .b_form .form_cs {
+        flex-direction: column;
+        padding-top: 12px;
+    }
+
+    .b_form .form_cs>div {
+        padding-right: 0;
+    }
+
+    .b_form .f_cs_i {
+        margin-bottom: 8px;
+    }
+
+    .b_form .f_cs_i label {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        padding-left: 24px;
+    }
+
+    .b_form .i_checkbox {
+        height: 16px;
+        width: 16px;
+    }
+
+    .b_form .buttons {
+        margin-top: -8px;
+    }
+
+    .b_form .success .after_sent {
+        font-size: 22px;
+        line-height: 32px;
+    }
+
+    .b_form .email_form.success .after_sent {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .b_form .gform_wrapper label.gfield_label {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .b_form .gform_wrapper .gfield_checkbox li label,
+    .b_form .gform_wrapper .gfield_radio li label {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .b_form .gform_wrapper .gform_footer input.button,
+    .b_form .gform_wrapper .gform_footer input[type="submit"],
+    .b_form .gform_wrapper .gform_page_footer input.button,
+    .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        padding: 9px 16px;
+    }
+
+    .b_form_mailchimp input#mce-EMAIL {
+        line-height: 19px;
+        font-size: 15px;
+    }
+
+    .b_form_mailchimp #mc_embed_signup div.mce_inline_error {
+        font-size: 15px;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (max-width: 439px) {}
+
+@media all and (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
+
+.foot_1 {
+    font-size: 1em;
+    line-height: 130%;
+}
+
+.foot_1 .inner {
+    max-width: 1240px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin: 0 auto;
+}
+
+.foot_1 .top {
+    display: flex;
+    justify-content: space-between;
+    padding: 82px 0 64px;
+}
+
+.foot_1 .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.foot_1 .contact_info {
+    line-height: 138%;
+    margin-top: 20px;
+}
+
+.foot_1 .contact_info .c_i_1 {
+    margin-bottom: 19px;
+}
+
+.foot_1 .right {
+    display: flex;
+    align-items: flex-start;
+}
+
+.foot_1 .menus {
+    display: flex;
+}
+
+.foot_1 .menus>div {
+    width: 206px;
+    padding-left: 13px;
+}
+
+.foot_1 .menus .heading {
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.foot_1 .menus li {
+    margin-bottom: 6px;
+}
+
+.foot_1 .menus ul li:last-child {
+    margin-bottom: 0;
+}
+
+.foot_1 .newsletter_wrapper {
+    width: 284px;
+    margin-top: -17px;
+}
+
+.newsletter_wrapper .b_form .buttons {
+    margin-top: -1px;
+}
+
+.foot_1.bg_color_F4EAE1 .b12 .content_wrapper {
+    background: #f9f4f0;
+}
+
+.foot_1.bg_color_F9F4F0 .b12 .content_wrapper {
+    background: #fcfaf8;
+}
+
+.foot_1 .b12 {
+    position: relative;
+}
+
+.foot_1 .b12 .img_bg {
+    right: -9px;
+    bottom: -14px;
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    z-index: 1;
+    background: url(../../../themes/lilosocial-framework/img/one_dot_2.svg) repeat bottom right;
+}
+
+.foot_1 .b12 .content_wrapper {
+    position: relative;
+    z-index: 3;
+    background: #f9f4f0;
+    border-radius: 4px;
+    padding: 17px 14px;
+}
+
+.foot_1 .b12 .heading {
+    margin-bottom: 5px;
+}
+
+.foot_1 .b12 .b_form {
+    margin-top: 20px;
+}
+
+.foot_1 .b12 .b_form .gfield {
+    margin-bottom: 24px;
+}
+
+.foot_1 a {
+    transition: all 200ms ease-in-out;
+}
+
+.foot_1 a:hover {
+    color: #fc5711;
+}
+
+.foot_1 .bottom .right ul {
+    display: flex;
+}
+
+.foot_1 .bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-top: 1px solid #ece7e3;
+    font-size: 0.88em;
+    line-height: 150%;
+    color: #878482;
+}
+
+.foot_1 .bottom a {
+    color: #878482;
+}
+
+.foot_1 .bottom a:hover {
+    color: #fc5711;
+}
+
+.foot_1 .bottom .right ul li {
+    display: flex;
+    align-items: center;
+}
+
+.foot_1 .bottom .right ul li:after {
+    content: "";
+    height: 2px;
+    width: 2px;
+    background: #ccc;
+    display: block;
+    border-radius: 50%;
+    margin: 0 9px;
+}
+
+.foot_1 .bottom .right ul li:last-child:after {
+    content: none;
+}
+
+.foot_1 .right .contact_info {
+    display: none;
+}
+
+.foot_1 .menus .heading .plus_minus_2_wrapper {
+    display: none;
+}
+
+.foot_1 .b_form .gform_wrapper div.validation_error {
+    padding-bottom: 0;
+}
+
+.foot_1 .b_form .gform_validation_error.gform_wrapper .gform_footer {
+    margin: 22px 0 0 0;
+}
+
+.foot_1 .b_form .gform_wrapper li.gfield.gfield_error,
+.foot_1 .b_form .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+    margin-bottom: 22px !important;
+}
+
+@media only screen and (max-width: 990px) {
+    .foot_1 .inner {
+        max-width: 756px;
+    }
+
+    .foot_1 .top {
+        padding: 58px 0 48px;
+    }
+
+    .foot_1 .menus {
+        padding-right: 15px;
+    }
+
+    .foot_1 .menus>div {
+        width: 107px;
+        padding-left: 11px;
+    }
+
+    .foot_1 .menus .heading {
+        margin-bottom: 8px;
+        margin-top: 0px;
+    }
+
+    .foot_1 .menus li {
+        margin-bottom: 0px;
+    }
+
+    .foot_1 .newsletter_wrapper {
+        width: 193px;
+        margin-top: -16px;
+        margin-right: 8px;
+    }
+
+    .foot_1 .b12 .content_wrapper {
+        padding: 15px 14px;
+    }
+
+    .foot_1 .b12 .heading {
+        margin-bottom: 6px;
+    }
+
+    .newsletter_wrapper .fi-03-v05 {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.153756px;
+    }
+
+    .foot_1 .b12 .b_form {
+        margin-top: 9px;
+    }
+
+    .foot_1 .b12 .b_form .gfield {
+        margin-bottom: 19px;
+    }
+
+    .newsletter_wrapper .b_form .buttons {
+        margin-top: -1px;
+    }
+
+    .foot_1 .fi-01 {
+        font-size: 12px;
+        line-height: 16px;
+        letter-spacing: -0.168932px;
+        padding: 6px 12px;
+    }
+
+    .foot_1 .bottom {
+        font-size: 10px;
+        line-height: 15px;
+        letter-spacing: -0.153756px;
+        padding: 13px 0;
+    }
+
+    .foot_1 .contact_info {
+        margin-top: 5px;
+    }
+
+    .foot_1 .b_form .gform_wrapper div.validation_error {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .foot_1 .left .contact_info {
+        display: none;
+    }
+
+    .foot_1 .inner {
+        max-width: 374px;
+    }
+
+    .foot_1 .top {
+        flex-direction: column;
+        padding: 48px 0 56px;
+    }
+
+    .foot_1 .right {
+        flex-direction: column;
+    }
+
+    .foot_1 .menus {
+        padding-right: 0;
+        flex-direction: column;
+        margin-top: 44px;
+        width: 100%;
+    }
+
+    .foot_1 .menus>div {
+        width: 100%;
+        padding-left: 0;
+        border-bottom: 1px solid #e6e3e1;
+        margin-bottom: 15px;
+        overflow: hidden;
+    }
+
+    .foot_1 .menus .heading {
+        margin-bottom: 15px;
+        margin-top: 0px;
+        position: relative;
+    }
+
+    .foot_1 .menus>div ul {}
+
+    .foot_1 .newsletter_wrapper {
+        width: 100%;
+        margin-top: 41px;
+        margin-right: 8px;
+        padding-right: 6px;
+    }
+
+    .foot_1 .b12 .content_wrapper {
+        padding: 16px 16px 17px;
+    }
+
+    .foot_1 .b12 .heading {
+        margin-bottom: 4px;
+    }
+
+    .newsletter_wrapper .fi-03-v05 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+    }
+
+    .foot_1 .menus li {
+        margin-bottom: 12px;
+    }
+
+    .foot_1 .b12 .b_form {
+        margin-top: 21px;
+    }
+
+    .newsletter_wrapper .b_form .buttons {
+        margin-top: 24px;
+    }
+
+    .foot_1 .fi-01 {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        padding: 8px 15px;
+    }
+
+    .foot_1 .right .contact_info {
+        display: block;
+        margin-top: 58px;
+    }
+
+    .foot_1 .bottom {
+        font-size: 13px;
+        line-height: 20px;
+        letter-spacing: -0.2px;
+        padding: 16px 0;
+        flex-direction: column;
+    }
+
+    .left-copy {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .foot_1 .bottom .right ul li:after {
+        margin: 0 8px;
+    }
+
+    .foot_1 .menus .heading .plus_minus_2_wrapper {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 2px;
+        display: flex;
+        width: 14px;
+        height: 14px;
+    }
+
+    .foot_1 .plus_minus_2 {
+        position: relative;
+        width: 12px;
+        height: 12px;
+    }
+
+    .foot_1 .plus_minus_2:before,
+    .foot_1 .plus_minus_2:after {
+        content: "";
+        position: absolute;
+        background-color: #373a3f;
+        transition: transform 0.25s ease-out;
+    }
+
+    .foot_1 .plus_minus_2:before {
+        top: 0;
+        left: 50%;
+        width: 2px;
+        height: 100%;
+        margin-left: -1px;
+    }
+
+    .foot_1 .plus_minus_2:after {
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+    }
+
+    .foot_1 .menu.active .plus_minus_2:before {
+        transform: rotate(90deg);
+    }
+
+    .foot_1 .menu.active .plus_minus_2:after {
+        transform: rotate(180deg);
+    }
+
+    .foot_1 .menus .menu ul {
+        max-height: 0;
+        -webkit-transition: all 0.35s;
+        transition: all 0.35s;
+    }
+
+    .foot_1 .menus .menu.active ul {
+        max-height: 100vh;
+        padding: 12px 0px 23px;
+    }
+
+    .foot_1 .b_form .gform_wrapper .gform_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"],
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        padding: 2px 16px;
+        display: inline-block;
+        width: auto;
+        margin-top: 10px;
+        margin-bottom: 0;
+    }
+
+    .foot_1 .b_form .gform_wrapper div.validation_error {
+        font-size: 13px;
+    }
+
+    .foot_1 .b_form .gform_validation_error.gform_wrapper .gform_footer {
+        margin: 10px 0 0 0;
+    }
+
+    .foot_1 .b_form .gform_wrapper li.gfield.gfield_error,
+    .foot_1 .b_form .gform_wrapper li.gfield.gfield_error.gfield_contains_required.gfield_creditcard_warning {
+        margin-bottom: 10px !important;
+    }
+
+    .foot_1 .b_form .gform_wrapper .gform_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_footer input[type="submit"],
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input.button,
+    .foot_1 .b_form .gform_wrapper .gform_page_footer input[type="submit"] {
+        font-size: 16px;
+        line-height: 22px;
+        letter-spacing: -0.2px;
+        padding: 9px 16px;
+    }
+}
